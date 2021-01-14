@@ -1,0 +1,43 @@
+<mat-toolbar id="mainToolbar" color="primary">
+  <mat-icon (click)="onToolbarMenuToggle()" id="toolbarMenu">menu</mat-icon>
+  Employee Portal
+  <span class="toolbar-spacer"></span>
+  <mat-icon class="toolbar-icon" (click)="logout()">logout</mat-icon>
+</mat-toolbar>
+
+<mat-sidenav-container id="sidenavContainer" fullscreen>
+  <mat-sidenav mode="side" id="sidenav" [class.menu-open]="isMenuOpen" [class.menu-close]="!isMenuOpen" opened>
+
+    <mat-list id="menus">
+
+      <mat-list-item>
+        <button class="menu-item" mat-flat-button [routerLink]="['../navbar/empprofile']">
+          <mat-icon>account_circle</mat-icon>
+          Employee Profile
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button [routerLink]="['../navbar/createleave']" class="menu-item" mat-flat-button>
+          <mat-icon>assignment</mat-icon> Create Leave Request
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button [routerLink]="['../navbar/viewleave']" class="menu-item" mat-flat-button>
+          <mat-icon>info</mat-icon> Leave Details
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button [routerLink]="['../navbar/salaryslip']" class="menu-item" mat-flat-button>
+          <mat-icon>attach_money</mat-icon> Salary Details
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin }">
+    <!--  <div class = "progress-bar" *ngIf="_loginservice.isLoading | async " >
+        <mat-progress-bar color="grey" mode="indeterminate" value="40"></mat-progress-bar>
+      </div>  -->
+    <router-outlet> </router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

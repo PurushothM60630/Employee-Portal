@@ -1,0 +1,25 @@
+<div >
+    <mat-toolbar class="main-toolbar">
+      <img  src="assets/kaarlogo.png"  class="toolbar-icon">
+      <span class="toolbar-buttons"></span>
+    </mat-toolbar>
+  </div>
+  <div  fxFlexFill class="main-div" fxLayoutAlign="center center">
+    <mat-card fxFlex="27" class="card">
+        <mat-toolbar class="login-toolbar">Employee Portal Login <mat-icon class="icon-position">fingerprint</mat-icon> </mat-toolbar>
+        <form #f ="ngForm" name="form" (ngSubmit)="onSubmit(f)" fxLayoutAlign="stretch" fxLayout="column" class="login-form" autocomplete="off"> 
+            <mat-form-field >
+              <input  [(ngModel)]="username" name="username" matInput placeholder="Username" >
+            </mat-form-field>
+          
+            <mat-form-field >
+              
+              <input [(ngModel)]="password" name="password" matInput [type]="hide ? 'password' : 'text'" placeholder="password">
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+            <button class="login-button" mat-raised-button type="submit"[class.spinner]="loading" [disabled]="loading">Login</button>
+          </form>
+    </mat-card>
+  </div>

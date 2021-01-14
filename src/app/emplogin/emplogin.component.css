@@ -1,0 +1,70 @@
+.main-div mat-card{
+    padding: 0px;
+} 
+.login-form {
+    padding:20px;
+    background-color:lavender;
+}
+.mat-toolbar {
+    background:dimgrey;
+    color: white;
+}
+.icon-position{
+    display: flex;
+    margin-left: auto;
+}
+.login-toolbar{
+    background-color: #34b5b8;
+    display: flex;
+    margin-right: auto;
+    justify-content: flex-end;
+    color: white;
+}
+.main-toolbar{
+        position: fixed;
+        top:0px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        opacity: 0.9;
+}
+.toolbar-icon{
+    height: 100px; 
+    width:100px;
+    cursor: pointer;
+    margin-right: auto;
+}
+.login-button{
+    color: white;
+    background:dimgray;
+}
+
+.mat-toolbar a{
+    display: inline-block;
+    padding: 0px 20px;
+    text-decoration: none;
+}
+.mat-toolbar a:hover{
+    color: #b7cbcc;
+}
+.mat-toolbar a{
+    transition: all 0.3s ease 0s;
+}
+.contactbutton {
+    padding:9px 25px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 50px;
+    
+}
+.main-div{
+    background-image: url(C:\Users\DELL\employeeport\src\assets\employee.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.card {
+    opacity: 0.9;
+    border: 4px;
+}

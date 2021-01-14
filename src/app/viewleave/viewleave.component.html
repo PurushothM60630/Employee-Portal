@@ -1,0 +1,30 @@
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Navbar</a></li>
+    <li><a href="#">View Leave</a></li>
+  </ul>
+<div id="print-section">
+  <table class="table">
+    <thead class="black white-text">
+      <tr class="headercolor">
+        <th scope="col">Leave ID</th>
+        <th scope="col">From Date</th>
+        <th scope="col">To Date</th>
+        <th scope="col">Leave Type</th>
+        <th scope="col">Approved By</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead> 
+    <tbody>
+      <tr *ngFor= "let viewleave of viewleave">
+        <td>{{viewleave.LEAVEID}}</td>
+        <td>{{viewleave.FROMDATE}}</td>
+        <td>{{viewleave.TODATE}}</td>
+        <td class="leavetype">{{viewleave.LEAVETYPE}}</td>
+        <td class="emailto">{{viewleave.EMAILTO}}</td>
+        <td class="status"[ngStyle]="{'color':viewleave.STATUS == 'APPROVED' ? 'green' : 'red' }">{{viewleave.STATUS}}</td>
+      </tr> 
+    </tbody>
+  </table>
+</div>
+ 

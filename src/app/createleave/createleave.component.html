@@ -1,0 +1,97 @@
+<ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Navbar</a></li>
+    <li><a href="#">Create Leave Request</a></li>
+</ul>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">LEAVE FORM</h1>
+            </div>
+
+            <div class="card-body">
+                <form [formGroup]="userform" autocomplete="off">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Leave Type :</label>
+                                <input type="text" formControlName="Leavetype" placeholder="Leave Type"
+                                    class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Email TO :</label>
+                                <input type="text" formControlName="EmailTo" placeholder="JAYHR@ACC.COM" disabled
+                                    class="form-control" >
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="width: auto;">
+                    <label>Reason :</label>
+                    <textarea formControlName="Reason" class="form-control" id="exampleFormControlTextarea1" rows="4"
+                        placeholder="Reason for taking leave"></textarea>
+                    <hr style="width: auto;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>From Date :</label>
+                                <input formControlName="FromDate" type="date" placeholder="From Date"
+                                    class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>To Date :</label>
+                                <input formControlName="ToDate" type="date" placeholder="To Date" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="container">
+                            <div class="form-group">
+                                <div class="text-md-center">
+                                    <button mat-raised-button (click)="createleaverequest()">Create Leave
+                                        Request</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Second column-->
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">EMPLOYEE DETAILS</h1>
+            </div>
+
+            <div class="card-body">
+                <form  autocomplete="off">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Employee ID :</label>
+                                <input type="text" placeholder="00000006" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"> 
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Desination :</label>
+                                <input type="text" placeholder="SAP CONSULTANT" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
